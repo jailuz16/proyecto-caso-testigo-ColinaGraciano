@@ -1,0 +1,10 @@
+  e2e-tests:
+    name: E2E Tests
+    runs-on: ubuntu-latest
+    needs: [test-backend, test-frontend]
+    
+    steps:
+    - name: Checkout código
+      uses: actions/checkout@v4
+      
+    # ... todo el contenido actual de e2e-tests ...
