@@ -1,0 +1,44 @@
+{
+  "name": "calculadora-empresarial-frontend",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "jest --coverage --collectCoverageFrom=[\"src/**/*.{js,jsx}\"]",
+    "test:watch": "jest --watch"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.1.1",
+    "vite": "^4.5.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
+  },
+  "jest": {
+  "testEnvironment": "jsdom",
+  "setupFilesAfterEnv": ["./jest.setup.js"],
+  "transform": {},
+  "extensionsToTreatAsEsm": [".jsx"],
+  "collectCoverageFrom": [
+    "src/**/*.{js,jsx}",
+    "!src/main.jsx"
+  ],
+  "coverageDirectory": "coverage",
+  "coverageReporters": ["text", "html", "lcov"],
+  "coverageThreshold": {
+    "global": {
+      "branches": 70,
+      "functions": 70,
+      "lines": 70,
+      "statements": 70
+    }
+  }
+}
+}
